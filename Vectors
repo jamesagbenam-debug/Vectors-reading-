@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> marks;   // create a vector of integers
+    int n, value, sum = 0;
+
+    cout << "How many marks do you want to enter? ";
+    cin >> n;
+
+    // Input values into vector
+    for(int i = 0; i < n; i++) {
+        cout << "Enter mark " << i + 1 << ": ";
+        cin >> value;
+        marks.push_back(value);   // add value to vector
+    }
+
+    // Display values
+    cout << "\nMarks entered: ";
+    for(int i = 0; i < n; i++) {
+        cout << marks[i] << " ";
+        sum += marks[i];
+    }
+
+    // Calculate average
+    double average = (double)sum / n;
+
+    cout << "\nTotal: " << sum << endl;
+    cout << "Average: " << average << endl;
+
+    return 0;
+}
